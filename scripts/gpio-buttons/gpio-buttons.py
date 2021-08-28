@@ -63,12 +63,12 @@ def def_prev():
             break
 
 def def_halt():
-    for x in range(0, 19):
-        if btn_halt.is_pressed == True :
-            sleep(0.1)
-        else:
-            check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerpause", shell=True)
-            break
+#    for x in range(0, 19):
+#        if btn_halt.is_pressed == True :
+#            sleep(0.1)
+#        else:
+    check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerpause", shell=True)
+#            break
 	
 def toggle_display():
     check_call("/home/pi/oled_phoniebox/scripts/toggle_display/toggle_display.sh", shell=True)
@@ -79,7 +79,7 @@ btn_volup = Button(7,pull_up=True,hold_time=0.3,hold_repeat=True)
 btn_voldown = Button(13,pull_up=True,hold_time=0.3,hold_repeat=True)
 btn_next = Button(8,pull_up=True,hold_time=2.0,hold_repeat=False)
 btn_prev = Button(27,pull_up=True,hold_time=2.0,hold_repeat=False)
-btn_halt = Button(12,pull_up=True,hold_time=2.0,hold_repeat=False)
+btn_halt = Button(12,pull_up=True,hold_time=0.0,hold_repeat=False)
 
 #btn_shut.when_held = def_shutdown
 #btn_vol0.when_pressed = def_vol0
