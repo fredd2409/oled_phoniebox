@@ -24,6 +24,8 @@ def get_device(deviceName):
     # create device
     try:
         device = cmdline.create_device(args)
+        # rotate = 2: rotate by 180deg, 0=no rotation
+        device.capabilities(device.width, device.height, 2, device.mode)
     except error.Error as e:
         parser.error(e)
     return device
