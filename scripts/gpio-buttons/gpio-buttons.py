@@ -125,9 +125,9 @@ btn_voldown.when_pressed = def_volD
 # When the Volume Down button was held for more than 0.3 seconds every 0.3 seconds he will lower t$
 btn_voldown.when_held = def_volD
 btn_next.when_pressed = def_next
-btn_next.when_held = def_contrastup
+#btn_next.when_held = def_contrastup
 btn_prev.when_pressed = def_prev
-btn_prev.when_held = def_contrastdown
+#btn_prev.when_held = def_contrastdown
 btn_halt.when_pressed = def_halt
 btn_halt.when_held = toggle_display
 
